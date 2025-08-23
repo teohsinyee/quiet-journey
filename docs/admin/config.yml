@@ -1,0 +1,24 @@
+backend:
+  name: git-gateway
+  repo: teohsinyee/quiet-journey
+
+media_folder: docs/uploads
+public_folder: /uploads
+
+collections:
+  - name: pages
+    label: Pages
+    folder: docs/pages
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Body, name: body, widget: markdown }
+  - name: notes
+    label: Notes
+    folder: docs/notes
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Body, name: body, widget: markdown }
