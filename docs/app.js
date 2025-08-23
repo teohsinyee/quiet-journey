@@ -82,6 +82,9 @@ document.addEventListener("click", (e) => {
   if (href.startsWith("?page=open-questions") || href.includes("page=open-questions")) {
     history.pushState({ page: "open-questions" }, "", "?page=open-questions");
     renderOpenQuestions();
+  } else if (href.startsWith("?page=calendar") || href.includes("page=calendar")) {
+    history.pushState({ page: "calendar" }, "", "?page=calendar");
+    renderCalendar();
   } else {
     const path = href.split("#")[0];
     history.pushState({ page: path }, "", `?page=${encodeURIComponent(path)}`);
@@ -105,6 +108,7 @@ window.addEventListener("popstate", () => {
     return;
   }
   if (pageParam === "open-questions") renderOpenQuestions();
+  else if (pageParam === "calendar") renderCalendar();
   else loadMD(pageParam);
 });
 
@@ -130,6 +134,7 @@ function handleRoute() {
     return;
   }
   if (pageParam === "open-questions") renderOpenQuestions();
+  else if (pageParam === "calendar") renderCalendar();
   else loadMD(pageParam);
 }
 window.addEventListener("DOMContentLoaded", handleRoute);
@@ -264,4 +269,60 @@ async function renderOpenQuestions() {
   } catch (e) {
     content.innerHTML = "<p>Failed to load open questions.</p>";
   }
+}
+
+async function renderCalendar() {
+  const data = window.__manifest || await loadManifest();
+  content.innerHTML = "";
+  const h1 = document.createElement("h1");
+  h1.textContent = "Calendar";
+  content.appendChild(h1);
+
+  const stats = document.createElement("div");
+  stats.className = "meta";
+  const dates = data.entries.map(e => e.date).sort();
+  if (dates.length) {
+    const start = new Date(dates[0]);
+    const today = new Date();
+    const daysSinceStart = Math.floor((today - start) / 86400000) + 1;
+    const skipped = daysSinceStart - dates.length;
+    stats.textContent = `Entries: ${dates.length} • Days since start: ${daysSinceStart} • Days skipped: ${skipped}`;
+  } else {
+    stats.textContent = "No reflections yet.";
+  }
+  content.appendChild(stats);
+
+  const now = new Date();
+  const year = now.getFullYear();
+  const month = now.getMonth();
+  const first = new Date(year, month, 1);
+  const last = new Date(year, month + 1, 0);
+  const table = document.createElement("table");
+  table.className = "calendar";
+  const thead = document.createElement("thead");
+  const hr = document.createElement("tr");
+  ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].forEach(d => {
+    const th = document.createElement("th"); th.textContent = d; hr.appendChild(th);
+  });
+  thead.appendChild(hr); table.appendChild(thead);
+  const tbody = document.createElement("tbody");
+  let tr = document.createElement("tr");
+  for (let i=0; i<first.getDay(); i++) tr.appendChild(document.createElement("td"));
+  for (let d=1; d<=last.getDate(); d++) {
+    const td = document.createElement("td");
+    const dateStr = `${year}-${String(month+1).padStart(2,'0')}-${String(d).padStart(2,'0')}`;
+    const entry = data.entries.find(e => e.date === dateStr);
+    if (entry) {
+      const a = document.createElement("a");
+      a.href = entry.path; a.setAttribute("data-route", ""); a.textContent = d;
+      td.className = "done"; td.appendChild(a);
+    } else {
+      td.textContent = d; td.className = "miss";
+    }
+    tr.appendChild(td);
+    if ((first.getDay() + d) % 7 === 0) { tbody.appendChild(tr); tr = document.createElement("tr"); }
+  }
+  if (tr.children.length) tbody.appendChild(tr);
+  table.appendChild(tbody);
+  content.appendChild(table);
 }
