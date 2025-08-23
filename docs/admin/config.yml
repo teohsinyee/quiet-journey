@@ -1,6 +1,9 @@
 backend:
-  name: git-gateway
+  name: github
   repo: teohsinyee/quiet-journey
+  branch: main
+  base_url: https://quiet-journey-oauth.example.com
+  auth_endpoint: auth
 
 media_folder: docs/uploads
 public_folder: /uploads
@@ -22,3 +25,16 @@ collections:
     fields:
       - { label: Title, name: title, widget: string }
       - { label: Body, name: body, widget: markdown }
+  - name: openquestions
+    label: Open Questions
+    file: docs/data/open-questions.json
+    fields:
+      - label: Items
+        name: items
+        widget: list
+        fields:
+          - { label: Question, name: question, widget: string }
+          - { label: Posted, name: posted, widget: datetime, format: "YYYY-MM-DD" }
+          - { label: Status, name: status, widget: select, options: [open, inprogress, answered] }
+          - { label: Answer, name: answer, widget: text, required: false }
+          - { label: Answered, name: answered, widget: datetime, format: "YYYY-MM-DD", required: false }

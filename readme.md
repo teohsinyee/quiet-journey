@@ -1,6 +1,6 @@
 # Quiet Journey
 
-This is my personal journey of reading the Bible one chapter a day.  
+This is my personal journey of reading the Bible one chapter a day.
 I realized I often worked hard in life and learning, but neglected God’s Word.
 
 Here you’ll find:
@@ -12,17 +12,18 @@ Here you’ll find:
 
 ### Why public?
 
-Because I don’t want to remain a beginner forever.  
+Because I don’t want to remain a beginner forever.
 Sharing openly keeps me accountable, and I hope it provokes curiosity — whether you’re a non-believer, a new believer, or a long-time Christian.
 
 ---
 
 ### Explore the site
-- **Reflections** → my thoughts & struggles from each chapter  
-- **Open Questions** → raw, honest questions, tracked over time  
-- **Reading Plan** → the roadmap  
+- **Reflections** → my thoughts & struggles from each chapter
+- **Open Questions** → raw, honest questions, tracked over time
+- **Reading Plan** → the roadmap
+- **Calendar** → see completed days and skipped ones at a glance
 
-Visit live:  
+Visit live:
 👉 https://teohsinyee.github.io/quiet-journey/
 
 ---
@@ -31,12 +32,7 @@ Visit live:
 
 ### Daily workflow
 1. Read today’s chapter (see [Reading Plan](./docs/pages/reading-plan.md)).
-2. Create a note in `/docs/notes/`  
-   - filename: `YYYY-MM-DD-book-chapter.md`  
-   - use `_template_reflection.md` as structure.
-3. Update `/docs/data/manifest.json`  
-   - Add new entry (title, date, path, excerpt).
-4. If I have new questions:  
-   - Use Open Questions page → Generate snippet  
-   - Paste into `/docs/data/open-questions.json`.
-5. Commit and push.
+2. Visit [the CMS](./docs/admin/) (powered by Decap CMS) and log in with GitHub via the OAuth proxy.
+3. Add a new entry in **Notes** and save.
+4. GitHub Actions auto-generate `manifest.json` and the site publishes within minutes.
+5. To track questions, use the **Open Questions** collection or the in-site helper to append to `open-questions.json`.

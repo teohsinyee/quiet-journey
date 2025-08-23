@@ -1,4 +1,3 @@
-
 :root {
   --bg: #ffffff;
   --text: #0f172a;
@@ -92,7 +91,18 @@ html, body { height: 100%; margin: 0; font-family: Inter, system-ui, -apple-syst
 
 .help { font-size: 13px; color: var(--muted); margin-top: 8px; }
 
+/* Calendar */
+.calendar { width:100%; border-collapse: collapse; margin-top:16px; }
+.calendar th, .calendar td { width:14.28%; padding:8px; text-align:center; border:1px solid var(--border); }
+.calendar td.done { background: var(--accent-soft); }
+.calendar td.miss { color: var(--muted); }
+.calendar td a { text-decoration:none; color: var(--accent); }
+
 @media (max-width: 1000px) {
-  .container { grid-template-columns: 1fr; }
-  .sidebar { position: sticky; top: 56px; z-index: 10; background: var(--bg); }
+  .container { display:block; }
+  .sidebar { position:relative; top:auto; border-right:none; border-bottom:1px solid var(--border); }
+}
+@media (max-width: 600px) {
+  .topbar { flex-direction:column; align-items:flex-start; }
+  .topnav { display:flex; flex-wrap:wrap; gap:8px; }
 }
