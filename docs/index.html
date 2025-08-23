@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bible Reading Journey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css"/>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <a href="#" id="homeLink">Bible Reading Journey</a>
+      <span id="progress" class="badge"></span>
+    </div>
+    <nav class="topnav">
+      <a href="./notes/000-welcome.md" data-route>My Intention</a>
+      <a href="./pages/reading-plan.md" data-route>Reading Plan</a>
+      <a href="?page=open-questions" data-route>Open Questions</a>
+      <button id="themeToggle" title="Toggle theme">Theme</button>
+      <select id="palette" title="Color palette">
+        <option value="royal">Royal</option>
+        <option value="sunrise">Sunrise</option>
+        <option value="forest">Forest</option>
+        <option value="lavender">Lavender</option>
+        <option value="olive">Olive</option>
+      </select>
+    </nav>
+  </header>
+
+  <main class="container">
+    <aside class="sidebar">
+      <input id="search" class="search" type="search" placeholder="Search reflections..." />
+      <div id="list-reflections" class="list"></div>
+    </aside>
+    <section class="content">
+      <article id="content" class="prose"></article>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>

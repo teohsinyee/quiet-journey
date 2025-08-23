@@ -1,0 +1,264 @@
+# Reading Plan
+
+260-day New Testament plan. One chapter per day.
+
+- Day 1: Matthew 1
+- Day 2: Matthew 2
+- Day 3: Matthew 3
+- Day 4: Matthew 4
+- Day 5: Matthew 5
+- Day 6: Matthew 6
+- Day 7: Matthew 7
+- Day 8: Matthew 8
+- Day 9: Matthew 9
+- Day 10: Matthew 10
+- Day 11: Matthew 11
+- Day 12: Matthew 12
+- Day 13: Matthew 13
+- Day 14: Matthew 14
+- Day 15: Matthew 15
+- Day 16: Matthew 16
+- Day 17: Matthew 17
+- Day 18: Matthew 18
+- Day 19: Matthew 19
+- Day 20: Matthew 20
+- Day 21: Matthew 21
+- Day 22: Matthew 22
+- Day 23: Matthew 23
+- Day 24: Matthew 24
+- Day 25: Matthew 25
+- Day 26: Matthew 26
+- Day 27: Matthew 27
+- Day 28: Matthew 28
+- Day 29: Mark 1
+- Day 30: Mark 2
+- Day 31: Mark 3
+- Day 32: Mark 4
+- Day 33: Mark 5
+- Day 34: Mark 6
+- Day 35: Mark 7
+- Day 36: Mark 8
+- Day 37: Mark 9
+- Day 38: Mark 10
+- Day 39: Mark 11
+- Day 40: Mark 12
+- Day 41: Mark 13
+- Day 42: Mark 14
+- Day 43: Mark 15
+- Day 44: Mark 16
+- Day 45: Luke 1
+- Day 46: Luke 2
+- Day 47: Luke 3
+- Day 48: Luke 4
+- Day 49: Luke 5
+- Day 50: Luke 6
+- Day 51: Luke 7
+- Day 52: Luke 8
+- Day 53: Luke 9
+- Day 54: Luke 10
+- Day 55: Luke 11
+- Day 56: Luke 12
+- Day 57: Luke 13
+- Day 58: Luke 14
+- Day 59: Luke 15
+- Day 60: Luke 16
+- Day 61: Luke 17
+- Day 62: Luke 18
+- Day 63: Luke 19
+- Day 64: Luke 20
+- Day 65: Luke 21
+- Day 66: Luke 22
+- Day 67: Luke 23
+- Day 68: Luke 24
+- Day 69: John 1
+- Day 70: John 2
+- Day 71: John 3
+- Day 72: John 4
+- Day 73: John 5
+- Day 74: John 6
+- Day 75: John 7
+- Day 76: John 8
+- Day 77: John 9
+- Day 78: John 10
+- Day 79: John 11
+- Day 80: John 12
+- Day 81: John 13
+- Day 82: John 14
+- Day 83: John 15
+- Day 84: John 16
+- Day 85: John 17
+- Day 86: John 18
+- Day 87: John 19
+- Day 88: John 20
+- Day 89: John 21
+- Day 90: Acts 1
+- Day 91: Acts 2
+- Day 92: Acts 3
+- Day 93: Acts 4
+- Day 94: Acts 5
+- Day 95: Acts 6
+- Day 96: Acts 7
+- Day 97: Acts 8
+- Day 98: Acts 9
+- Day 99: Acts 10
+- Day 100: Acts 11
+- Day 101: Acts 12
+- Day 102: Acts 13
+- Day 103: Acts 14
+- Day 104: Acts 15
+- Day 105: Acts 16
+- Day 106: Acts 17
+- Day 107: Acts 18
+- Day 108: Acts 19
+- Day 109: Acts 20
+- Day 110: Acts 21
+- Day 111: Acts 22
+- Day 112: Acts 23
+- Day 113: Acts 24
+- Day 114: Acts 25
+- Day 115: Acts 26
+- Day 116: Acts 27
+- Day 117: Acts 28
+- Day 118: Romans 1
+- Day 119: Romans 2
+- Day 120: Romans 3
+- Day 121: Romans 4
+- Day 122: Romans 5
+- Day 123: Romans 6
+- Day 124: Romans 7
+- Day 125: Romans 8
+- Day 126: Romans 9
+- Day 127: Romans 10
+- Day 128: Romans 11
+- Day 129: Romans 12
+- Day 130: Romans 13
+- Day 131: Romans 14
+- Day 132: Romans 15
+- Day 133: Romans 16
+- Day 134: 1 Corinthians 1
+- Day 135: 1 Corinthians 2
+- Day 136: 1 Corinthians 3
+- Day 137: 1 Corinthians 4
+- Day 138: 1 Corinthians 5
+- Day 139: 1 Corinthians 6
+- Day 140: 1 Corinthians 7
+- Day 141: 1 Corinthians 8
+- Day 142: 1 Corinthians 9
+- Day 143: 1 Corinthians 10
+- Day 144: 1 Corinthians 11
+- Day 145: 1 Corinthians 12
+- Day 146: 1 Corinthians 13
+- Day 147: 1 Corinthians 14
+- Day 148: 1 Corinthians 15
+- Day 149: 1 Corinthians 16
+- Day 150: 2 Corinthians 1
+- Day 151: 2 Corinthians 2
+- Day 152: 2 Corinthians 3
+- Day 153: 2 Corinthians 4
+- Day 154: 2 Corinthians 5
+- Day 155: 2 Corinthians 6
+- Day 156: 2 Corinthians 7
+- Day 157: 2 Corinthians 8
+- Day 158: 2 Corinthians 9
+- Day 159: 2 Corinthians 10
+- Day 160: 2 Corinthians 11
+- Day 161: 2 Corinthians 12
+- Day 162: 2 Corinthians 13
+- Day 163: Galatians 1
+- Day 164: Galatians 2
+- Day 165: Galatians 3
+- Day 166: Galatians 4
+- Day 167: Galatians 5
+- Day 168: Galatians 6
+- Day 169: Ephesians 1
+- Day 170: Ephesians 2
+- Day 171: Ephesians 3
+- Day 172: Ephesians 4
+- Day 173: Ephesians 5
+- Day 174: Ephesians 6
+- Day 175: Philippians 1
+- Day 176: Philippians 2
+- Day 177: Philippians 3
+- Day 178: Philippians 4
+- Day 179: Colossians 1
+- Day 180: Colossians 2
+- Day 181: Colossians 3
+- Day 182: Colossians 4
+- Day 183: 1 Thessalonians 1
+- Day 184: 1 Thessalonians 2
+- Day 185: 1 Thessalonians 3
+- Day 186: 1 Thessalonians 4
+- Day 187: 1 Thessalonians 5
+- Day 188: 2 Thessalonians 1
+- Day 189: 2 Thessalonians 2
+- Day 190: 2 Thessalonians 3
+- Day 191: 1 Timothy 1
+- Day 192: 1 Timothy 2
+- Day 193: 1 Timothy 3
+- Day 194: 1 Timothy 4
+- Day 195: 1 Timothy 5
+- Day 196: 1 Timothy 6
+- Day 197: 2 Timothy 1
+- Day 198: 2 Timothy 2
+- Day 199: 2 Timothy 3
+- Day 200: 2 Timothy 4
+- Day 201: Titus 1
+- Day 202: Titus 2
+- Day 203: Titus 3
+- Day 204: Philemon 1
+- Day 205: Hebrews 1
+- Day 206: Hebrews 2
+- Day 207: Hebrews 3
+- Day 208: Hebrews 4
+- Day 209: Hebrews 5
+- Day 210: Hebrews 6
+- Day 211: Hebrews 7
+- Day 212: Hebrews 8
+- Day 213: Hebrews 9
+- Day 214: Hebrews 10
+- Day 215: Hebrews 11
+- Day 216: Hebrews 12
+- Day 217: Hebrews 13
+- Day 218: James 1
+- Day 219: James 2
+- Day 220: James 3
+- Day 221: James 4
+- Day 222: James 5
+- Day 223: 1 Peter 1
+- Day 224: 1 Peter 2
+- Day 225: 1 Peter 3
+- Day 226: 1 Peter 4
+- Day 227: 1 Peter 5
+- Day 228: 2 Peter 1
+- Day 229: 2 Peter 2
+- Day 230: 2 Peter 3
+- Day 231: 1 John 1
+- Day 232: 1 John 2
+- Day 233: 1 John 3
+- Day 234: 1 John 4
+- Day 235: 1 John 5
+- Day 236: 2 John 1
+- Day 237: 3 John 1
+- Day 238: Jude 1
+- Day 239: Revelation 1
+- Day 240: Revelation 2
+- Day 241: Revelation 3
+- Day 242: Revelation 4
+- Day 243: Revelation 5
+- Day 244: Revelation 6
+- Day 245: Revelation 7
+- Day 246: Revelation 8
+- Day 247: Revelation 9
+- Day 248: Revelation 10
+- Day 249: Revelation 11
+- Day 250: Revelation 12
+- Day 251: Revelation 13
+- Day 252: Revelation 14
+- Day 253: Revelation 15
+- Day 254: Revelation 16
+- Day 255: Revelation 17
+- Day 256: Revelation 18
+- Day 257: Revelation 19
+- Day 258: Revelation 20
+- Day 259: Revelation 21
+- Day 260: Revelation 22

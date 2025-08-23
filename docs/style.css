@@ -1,0 +1,98 @@
+
+:root {
+  --bg: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --card: #f8fafc;
+  --accent: #2563eb;
+  --accent-2: #60a5fa;
+  --accent-soft: rgba(37,99,235,0.08);
+  --hero-grad-1: #dbeafe;
+  --hero-grad-2: #eef2ff;
+}
+:root.dark {
+  --bg: #0b1220;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --border: #1f2937;
+  --card: #0f172a;
+  --accent-soft: rgba(96,165,250,0.15);
+}
+:root[data-theme="royal"]  { --accent:#2563eb; --accent-2:#60a5fa; --hero-grad-1:#dbeafe; --hero-grad-2:#eef2ff; }
+:root[data-theme="sunrise"]{ --accent:#ea580c; --accent-2:#fb923c; --hero-grad-1:#ffedd5; --hero-grad-2:#fee2e2; }
+:root[data-theme="forest"] { --accent:#16a34a; --accent-2:#86efac; --hero-grad-1:#dcfce7; --hero-grad-2:#f0fdf4; }
+:root[data-theme="lavender"]{--accent:#7c3aed; --accent-2:#c4b5fd; --hero-grad-1:#ede9fe; --hero-grad-2:#fce7f3; }
+:root[data-theme="olive"]  { --accent:#3f6212; --accent-2:#a3e635; --hero-grad-1:#ecfccb; --hero-grad-2:#fef9c3; }
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); }
+
+.topbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 14px 18px; border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 20; background:
+   linear-gradient(90deg, var(--hero-grad-1), var(--hero-grad-2));
+}
+.brand a { text-decoration: none; color: var(--text); font-weight: 700; letter-spacing: .2px; }
+.badge { margin-left: 8px; padding: 4px 10px; border: 1px solid var(--border); border-radius: 999px; font-size: 12px; color: var(--muted); background: var(--bg); }
+.topnav a { text-decoration: none; color: var(--text); opacity: .8; margin-right: 12px; }
+.topnav a:hover { opacity: 1; }
+#themeToggle, #palette {
+  padding: 8px 10px; border: 1px solid var(--border); background: var(--bg);
+  color: var(--text); border-radius: 10px; cursor: pointer;
+}
+#palette { margin-left: 8px; }
+
+.container { display: grid; grid-template-columns: 320px 1fr; min-height: calc(100vh - 56px); }
+.sidebar { border-right: 1px solid var(--border); padding: 16px; display: flex; flex-direction: column; gap: 12px; background: var(--bg); }
+.search {
+  padding: 10px 12px; border: 1px solid var(--border); border-radius: 12px;
+  background: #fff; color: var(--text); box-shadow: 0 0 0 3px transparent;
+}
+.search:focus { outline: none; box-shadow: 0 0 0 3px var(--accent-soft); }
+
+.list { display: grid; gap: 12px; overflow: auto; }
+.card {
+  border: 1px solid var(--border); border-radius: 14px; background: var(--card);
+  padding: 14px; display: grid; gap: 8px;
+  transition: transform .08s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.08); border-color: var(--accent-2); }
+.card .title { font-weight: 700; letter-spacing: .2px; }
+.card .meta { font-size: 12px; color: var(--muted); display:flex; gap:8px; align-items:center; flex-wrap:wrap;}
+.card .excerpt { font-size: 14px; color: var(--text); opacity: .9; }
+.card a.read { text-decoration: none; font-size: 14px; color: var(--accent); font-weight: 600; }
+
+.content { padding: 28px; overflow: auto; }
+.prose { max-width: 820px; line-height: 1.7; }
+.prose h1, .prose h2, .prose h3 { line-height: 1.25; }
+.prose a { color: var(--accent); }
+.prose blockquote { border-left: 3px solid var(--accent-2); padding-left: 12px; color: var(--muted); background: var(--accent-soft); border-radius: 6px; }
+.prose code { background: rgba(15,23,42,0.06); padding: 2px 6px; border-radius: 6px; }
+
+/* Open Questions page */
+.toolbar { display:flex; gap:10px; flex-wrap:wrap; margin-bottom: 12px; }
+.toolbar input, .toolbar select, .toolbar button, .toolbar textarea {
+  padding: 8px 10px; border:1px solid var(--border); border-radius: 10px; background: var(--bg); color: var(--text);
+}
+.table {
+  width: 100%; border-collapse: collapse; font-size: 14px;
+}
+.table thead th {
+  text-align: left; padding: 10px; border-bottom: 1px solid var(--border); color: var(--muted);
+}
+.table tbody td {
+  padding: 10px; border-bottom: 1px solid var(--border);
+}
+.status-pill { padding: 2px 8px; border-radius: 999px; font-size: 12px; border:1px solid transparent; }
+.status-open { background: #fee2e2; border-color: #fecaca; }
+.status-inprogress { background: #fef9c3; border-color: #fde68a; }
+.status-answered { background: #dcfce7; border-color: #bbf7d0; }
+
+.help { font-size: 13px; color: var(--muted); margin-top: 8px; }
+
+@media (max-width: 1000px) {
+  .container { grid-template-columns: 1fr; }
+  .sidebar { position: sticky; top: 56px; z-index: 10; background: var(--bg); }
+}
