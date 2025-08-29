@@ -1,3 +1,30 @@
+/* ChatGPT5 Feedback Box */
+.chatgpt5-feedback {
+  background: #e6f7ff;
+  border-left: 4px solid #1890ff;
+  padding: 12px 16px;
+  margin: 18px 0;
+  display: flex;
+  align-items: flex-start;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(24,144,255,0.08);
+  border-radius: 8px;
+}
+.chatgpt-logo {
+  width: 28px;
+  height: 28px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+.chatgpt5-title {
+  font-weight: bold;
+  color: #1890ff;
+  margin-right: 8px;
+}
+.chatgpt5-text {
+  font-style: italic;
+  color: #333;
+}
 
 :root {
   --bg: #ffffff;
