@@ -6,7 +6,7 @@
   margin: 18px 0;
   display: flex;
   align-items: flex-start;
-  font-family: "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", 'Segoe UI', Arial, sans-serif;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", "Source Han Sans CN", "Arial Unicode MS", 'Segoe UI', Arial, sans-serif;
   box-shadow: 0 2px 8px rgba(24,144,255,0.08);
   border-radius: 8px;
 }
@@ -52,8 +52,19 @@
 :root[data-theme="lavender"]{--accent:#7c3aed; --accent-2:#c4b5fd; --hero-grad-1:#ede9fe; --hero-grad-2:#fce7f3; }
 :root[data-theme="olive"]  { --accent:#3f6212; --accent-2:#a3e635; --hero-grad-1:#ecfccb; --hero-grad-2:#fef9c3; }
 
+/* Chinese character support */
+*:lang(zh), *:lang(zh-CN), *:lang(zh-TW) {
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", "Source Han Sans CN", "Arial Unicode MS", sans-serif !important;
+}
+
+/* Ensure Chinese characters render properly in all text elements */
+.prose, .card, .content {
+  font-feature-settings: "kern" 1;
+  text-rendering: optimizeLegibility;
+}
+
 * { box-sizing: border-box; }
-html, body { height: 100%; margin: 0; font-family: Inter, "PingFang SC", "Microsoft YaHei", "WenQuanYi Micro Hei", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); }
+html, body { height: 100%; margin: 0; font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", "Noto Sans CJK SC", "Noto Sans SC", "Source Han Sans SC", "Source Han Sans CN", "Arial Unicode MS", Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); }
 
 .topbar {
   display: flex; justify-content: space-between; align-items: center;
