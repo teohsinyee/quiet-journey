@@ -111,14 +111,32 @@ window.addEventListener("popstate", () => {
 async function loadMD(path) {
   try {
     if (!path || path.endsWith("index.html")) {
-      path = "./notes/000-welcome.md";
+      path = "./notes/000-welcome.md"; // relative to /docs/
     }
-    const res = await fetch(path + "?v=" + Date.now());
+    // Normalize: ensure starts with ./notes/ or ./pages/
+    if (path.startsWith("notes/")) path = "./" + path;
+    if (path.startsWith("pages/")) path = "./" + path;
+    // Prevent accidental duplication of /docs/
+    if (path.startsWith("docs/notes/")) path = path.replace(/^docs\//, "./");
+    if (path.startsWith("docs/pages/")) path = path.replace(/^docs\//, "./");
+    const fetchPath = path + "?v=" + Date.now();
+    console.log("[loadMD] fetching", fetchPath);
+    const res = await fetch(fetchPath);
+    if (!res.ok) throw new Error(`Fetch failed ${res.status} ${res.statusText} for ${fetchPath}`);
     const text = await res.text();
-    content.innerHTML = marked.parse(text);
+    marked.setOptions({ breaks: true });
+    let html = marked.parse(text);
+    // Post-process to transform paragraphs starting with ChatGPT5 Feedback:
+    const chatgptLogoSVG = '<svg class="chatgpt-logo" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1890ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2a4.8 4.8 0 0 1 4.53 3.17 4.8 4.8 0 0 1 5.27 4.71 4.8 4.8 0 0 1-2.84 4.38A4.8 4.8 0 0 1 12 20.8a4.8 4.8 0 0 1-4.53-3.17 4.8 4.8 0 0 1-5.27-4.71 4.8 4.8 0 0 1 2.84-4.38A4.8 4.8 0 0 1 12 3.2Z"/></svg>';
+    html = html.replace(/<p>\s*(?:<em>)?\*?ChatGPT5 (?:Feedback)+:([\s\S]*?)<\/p>/gi, (m, body) => {
+      const feedbackText = body.replace(/^<\/em>/i, '').trim();
+      return `<div class="chatgpt5-feedback">${chatgptLogoSVG}<span class="chatgpt5-title">ChatGPT5 Feedback:</span> <span class="chatgpt5-text">${feedbackText}</span></div>`;
+    });
+    content.innerHTML = html;
     window.scrollTo({ top: 0, behavior: "smooth" });
   } catch (e) {
-    content.innerHTML = "<p>Unable to load this page.</p>";
+  content.innerHTML = `<p style="color:#b91c1c;background:#fee2e2;padding:12px;border-radius:8px;">Unable to load this page.<br><code>${e.message.replace(/</g,'&lt;')}</code></p>`;
+  console.error(e);
   }
 }
 
