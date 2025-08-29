@@ -128,8 +128,8 @@ async function loadMD(path) {
     let html = marked.parse(text);
     // Post-process to transform paragraphs starting with ChatGPT5 Feedback:
     const chatgptLogoSVG = '<svg class="chatgpt-logo" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1890ff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3.2a4.8 4.8 0 0 1 4.53 3.17 4.8 4.8 0 0 1 5.27 4.71 4.8 4.8 0 0 1-2.84 4.38A4.8 4.8 0 0 1 12 20.8a4.8 4.8 0 0 1-4.53-3.17 4.8 4.8 0 0 1-5.27-4.71 4.8 4.8 0 0 1 2.84-4.38A4.8 4.8 0 0 1 12 3.2Z"/></svg>';
-    html = html.replace(/<p>\s*(?:<em>)?\*?ChatGPT5 Feedback:([\s\S]*?)(?:<\/em>)?<\/p>/gi, (m, body) => {
-      const feedbackText = body.replace(/<\/em>/i, '').trim();
+    html = html.replace(/<p>\s*(?:<em>)?\*?ChatGPT5 (?:Feedback)+:([\s\S]*?)<\/p>/gi, (m, body) => {
+      const feedbackText = body.replace(/^<\/em>/i, '').trim();
       return `<div class="chatgpt5-feedback">${chatgptLogoSVG}<span class="chatgpt5-title">ChatGPT5 Feedback:</span> <span class="chatgpt5-text">${feedbackText}</span></div>`;
     });
     content.innerHTML = html;
