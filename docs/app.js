@@ -57,7 +57,9 @@ function renderList(data, q = "") {
   listReflections.innerHTML = "";
   const refs = data.entries;
   const filter = (e) => e.title.toLowerCase().includes(q);
-  refs.filter(filter).forEach(e => listReflections.appendChild(card(e)));
+  // Sort by date in descending order (most recent first)
+  const sorted = refs.slice().sort((a, b) => b.date.localeCompare(a.date));
+  sorted.filter(filter).forEach(e => listReflections.appendChild(card(e)));
   const done = refs.length;
   const target = data.target_reflections || 260;
   progress.textContent = `Progress: ${done}/${target}`;
